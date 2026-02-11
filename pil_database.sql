@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `auth_group` (
   `id` int NOT NULL,
   `name` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 -- --------------------------------------------------------
 
@@ -42,7 +43,8 @@ CREATE TABLE `auth_group_permissions` (
   `id` bigint NOT NULL,
   `group_id` int NOT NULL,
   `permission_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 -- --------------------------------------------------------
 
@@ -54,7 +56,8 @@ CREATE TABLE `auth_level` (
   `id` bigint NOT NULL,
   `label` varchar(255) NOT NULL,
   `description` longtext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 --
 -- Déchargement des données de la table `auth_level`
@@ -76,7 +79,8 @@ CREATE TABLE `auth_permission` (
   `name` varchar(255) NOT NULL,
   `content_type_id` int NOT NULL,
   `codename` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 --
 -- Déchargement des données de la table `auth_permission`
@@ -137,7 +141,8 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 CREATE TABLE `auth_role` (
   `id` bigint NOT NULL,
   `label` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 --
 -- Déchargement des données de la table `auth_role`
@@ -171,7 +176,8 @@ CREATE TABLE `auth_user` (
   `level_id` bigint DEFAULT NULL,
   `image_path` varchar(50) NOT NULL,
   `otp` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 --
 -- Déchargement des données de la table `auth_user`
@@ -190,7 +196,8 @@ CREATE TABLE `auth_user_groups` (
   `id` bigint NOT NULL,
   `user_id` bigint NOT NULL,
   `group_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 -- --------------------------------------------------------
 
@@ -202,7 +209,8 @@ CREATE TABLE `auth_user_user_permissions` (
   `id` bigint NOT NULL,
   `user_id` bigint NOT NULL,
   `permission_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 -- --------------------------------------------------------
 
@@ -231,7 +239,8 @@ CREATE TABLE `django_content_type` (
   `id` int NOT NULL,
   `app_label` varchar(100) NOT NULL,
   `model` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 --
 -- Déchargement des données de la table `django_content_type`
@@ -261,7 +270,8 @@ CREATE TABLE `django_migrations` (
   `app` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 --
 -- Déchargement des données de la table `django_migrations`
@@ -315,7 +325,8 @@ CREATE TABLE `django_session` (
   `session_key` varchar(40) NOT NULL,
   `session_data` longtext NOT NULL,
   `expire_date` datetime(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 --
 -- Déchargement des données de la table `django_session`
@@ -336,7 +347,8 @@ CREATE TABLE `timetable_classroom` (
   `capacity` int DEFAULT NULL,
   `description` longtext,
   `status` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 -- --------------------------------------------------------
 
@@ -350,7 +362,8 @@ CREATE TABLE `timetable_subject` (
   `code` varchar(255) DEFAULT NULL,
   `total_time` int NOT NULL,
   `level_id` bigint NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 -- --------------------------------------------------------
 
@@ -368,7 +381,8 @@ CREATE TABLE `timetable_timetable` (
   `subject_id` bigint NOT NULL,
   `user_id` bigint NOT NULL,
   `week` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 --
 -- Index pour les tables déchargées
